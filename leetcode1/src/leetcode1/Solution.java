@@ -17,7 +17,7 @@ import java.util.HashMap;
 		
 		public static int[] twoSum(int[] nums, int target) {
 	    	int[] rst = new int[2];
-	        if (nums == null || nums.length <= 1) {
+	        if (nums == null || nums.length <= 1)  {
 	        	return rst;
 	        }
 	        HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
