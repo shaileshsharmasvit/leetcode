@@ -20,7 +20,7 @@ import java.util.HashMap;
 	        if (nums == null || nums.length <= 1)  {
 	        	return rst;
 	        }
-	        HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
+	        HashMap<Integer, Integer> map = new HashMap<Integer , Integer>();
 	        for (int i = 0; i < nums.length; i++) {
 	        	int remaining = target - nums[i];
 	        	if (!map.containsKey(remaining)) {

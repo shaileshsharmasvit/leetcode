@@ -19,7 +19,7 @@ public class a {
 					return rst;
 				}
 	
-				HashMap<Integer,Integer> hm=new HashMap<Integer,Integer>();
+				HashMap<Integer,Integer> hm=new HashMap<Integer ,Integer>();
 				for(int i=0;i<nums.length;i++){
 					int remaining=target-nums[i];
 				if(!hm.containsKey(remaining))
