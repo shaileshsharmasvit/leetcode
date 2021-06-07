@@ -13,7 +13,7 @@ public class a {
 		System.out.println(ar[0]+"      "+ar[1]);
 	}
 	
-	public static  int[] twoSum(int nums[],int target){
+	public static  int[] twoSum(int nums[],int target)  {
 		int rst[]=new int[2] ;
 				if(nums==null || nums.length<=1){
 					return rst;
