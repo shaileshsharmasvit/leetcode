@@ -7,34 +7,39 @@ public class a {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		int nums[]={2, 7, 11, 15};
-		int target=18;
-		int ar[]=twoSum(nums,target);
-		System.out.println(ar[0]+"      "+ar[1]);
+String res=addString("456","77");
+	System.out.print(res);
 	}
 	
-	public static  int[] twoSum(int nums[],int target)  {
-		int rst[]=new int[2] ;
-				if(nums==null || nums.length<=1){
-					return rst;
-				}
-	
-				HashMap<Integer,Integer> hm=new HashMap<Integer ,Integer>();
-				for(int i=0;i<nums.length;i++){
-					int remaining=target-nums[i];
-				if(!hm.containsKey(remaining))
-				{
-					hm.put(nums[i],i);
-				}
-				else {
-					rst[0]=hm.get(remaining)+1;
-					rst[1]=i+1;
-					break;
-					
-				}
-				}
-				
-	return rst;
+	public static String addString(String num1,String num2){
+		
+
+		StringBuilder sb=new StringBuilder();
+		int i=num1.length()-1;
+		int j=num2.length()-1;
+		int carry=0;
+		
+		while(i>=0 || j>=0){
+			       int temp=carry;
+			if(i>=0 && j>=0){
+				        temp+=Character.getNumericValue(num1.charAt(i--))+Character.getNumericValue(num2.charAt(j--));
+			}
+			else if(i>=0 && j<0){
+			    	   temp+=Character.getNumericValue(num1.charAt(i--));
+			       }
+			else {
+			     temp+=  Character.getNumericValue(num2.charAt(j--));
+		}
+		carry=temp>9?1:0;
+		temp=temp>9?temp%10:temp;
+		sb.append(temp);
+			       
+		}
+		      if(carry>0){
+			sb.append(carry);
+		}
+	System.out.println(sb.toString());
+	return sb.reverse().toString();	
 	}
 
 }
